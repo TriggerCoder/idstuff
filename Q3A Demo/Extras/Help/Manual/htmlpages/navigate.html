@@ -1,0 +1,148 @@
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive 4">
+		<title>Quake 3 Arena: Manual Navigation</title>
+		<csscriptdict>
+			<script><!--
+CSStopExecution = false;
+CSInit = new Array;
+function CSScriptInit() {
+if(typeof(skipPage) != "undefined") { if(skipPage) return; }
+idxArray = new Array;
+for(var i=0;i<CSInit.length;i++)
+	idxArray[i] = i;
+CSAction2(CSInit, idxArray);
+}
+CSAg = window.navigator.userAgent; CSBVers = parseInt(CSAg.charAt(CSAg.indexOf("/")+1),10);
+function IsIE() { return CSAg.indexOf("MSIE") > 0;}
+function CSIEStyl(s) { return document.all.tags("div")[s].style; }
+function CSNSStyl(s) { return CSFindElement(s,0); }
+function CSFindElement(n,ly) { if (CSBVers < 4) return document[n];
+	var curDoc = ly ? ly.document : document; var elem = curDoc[n];
+	if (!elem) { for (var i=0;i<curDoc.layers.length;i++) {
+		elem = CSFindElement(n,curDoc.layers[i]); if (elem) return elem; }}
+	return elem;
+}
+function CSClickReturn () {
+	var bAgent = window.navigator.userAgent; 
+	var bAppName = window.navigator.appName;
+	if ((bAppName.indexOf("Explorer") >= 0) && (bAgent.indexOf("Mozilla/3") >= 0) && (bAgent.indexOf("Mac") >= 0))
+		return true; // dont follow link
+	else return false; // dont follow link
+}
+function CSButtonReturn () {
+	var bAgent = window.navigator.userAgent; 
+	var bAppName = window.navigator.appName;
+	if ((bAppName.indexOf("Explorer") >= 0) && (bAgent.indexOf("Mozilla/3") >= 0) && (bAgent.indexOf("Mac") >= 0))
+		return false; // follow link
+	else return true; // follow link
+}
+CSIm = new Object();
+function CSIShow(n,i) {
+	if (document.images) {
+		if (CSIm[n]) {
+			var img = (!IsIE()) ? CSFindElement(n,0) : document[n];
+			if (img && typeof(CSIm[n][i].src) != "undefined") {img.src = CSIm[n][i].src;}
+			if(i != 0)
+				self.status = CSIm[n][3];
+			else
+				self.status = " ";
+			return true;
+		}
+	}
+	return false;
+}
+function CSILoad(action) {
+	im = action[1];
+	if (document.images) {
+		CSIm[im] = new Object();
+		for (var i=2;i<5;i++) {
+			if (action[i] != '') { CSIm[im][i-2] = new Image(); CSIm[im][i-2].src = action[i]; }
+			else CSIm[im][i-2] = 0;
+		}
+		CSIm[im][3] = action[5];
+	}
+}
+CSStopExecution = false;
+
+function CSAction(array) { 
+	return CSAction2(CSAct, array);
+}
+function CSAction2(fct, array) { 
+	var result;
+	for (var i=0;i<array.length;i++) {
+		if(CSStopExecution) return false; 
+		var actArray = fct[array[i]];
+		if(actArray == null) return false; 
+		var tempArray = new Array;
+		for(var j=1;j<actArray.length;j++) {
+			if((actArray[j] != null) && (typeof(actArray[j]) == "object") && (actArray[j].length == 2)) {
+				if(actArray[j][0] == "VAR") {
+					tempArray[j] = CSStateArray[actArray[j][1]];
+				}
+				else {
+					if(actArray[j][0] == "ACT") {
+						tempArray[j] = CSAction(new Array(new String(actArray[j][1])));
+					}
+				else
+					tempArray[j] = actArray[j];
+				}
+			}
+			else
+				tempArray[j] = actArray[j];
+		}			
+		result = actArray[0](tempArray);
+	}
+	return result;
+}
+CSAct = new Object;
+
+// --></script>
+		</csscriptdict>
+		<csactiondict>
+			<script><!--
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'Game Overview',/*URL*/'../navart/nav_01_dn.gif',/*URL*/'../navart/nav_01_up.gif',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'Installation',/*URL*/'../navart/nav_02_dn.gif',/*URL*/'../navart/nav_02_up.gif',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'Arena Eternal',/*URL*/'../navart/nav_03_dn.gif',/*URL*/'../navart/nav_03_up.gif',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'MainMenu',/*URL*/'../navart/nav_04_dn.gif',/*URL*/'../navart/nav_04_up.gif',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'EscMenu',/*URL*/'../navart/nav_05_dn.gif',/*URL*/'../navart/nav_05_up.gif',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'DefaultHot',/*URL*/'../navart/nav_06_dn.gif',/*URL*/'../navart/nav_06_up.gif',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'Button7',/*URL*/'../navart/nav_07_dn.gif',/*URL*/'../navart/nav_07_up.gif',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'Credits',/*URL*/'../navart/nav_08_dn.gif',/*URL*/'../navart/nav_08_up.gif',/*URL*/'','');
+
+// --></script>
+		</csactiondict>
+	</head>
+
+	<body bgcolor="white" onload="CSScriptInit();">
+		<center>
+			<table cool width="797" height="83" border="0" cellpadding="0" cellspacing="0" gridx="16" showgridx usegridx gridy="16" showgridy usegridy>
+				<tr height="1" cntrlrow>
+					<td width="1" height="1"></td>
+					<td width="108" height="1"><spacer type="block" width="108" height="1"></td>
+					<td width="136" height="1"><spacer type="block" width="136" height="1"></td>
+					<td width="106" height="1"><spacer type="block" width="106" height="1"></td>
+					<td width="73" height="1"><spacer type="block" width="73" height="1"></td>
+					<td width="73" height="1"><spacer type="block" width="73" height="1"></td>
+					<td width="102" height="1"><spacer type="block" width="102" height="1"></td>
+					<td width="108" height="1"><spacer type="block" width="108" height="1"></td>
+					<td width="90" height="1"><spacer type="block" width="90" height="1"></td>
+				</tr>
+				<tr height="82">
+					<td width="1" height="82"><spacer type="block" width="1" height="82"></td>
+					<td width="108" height="82" colspan="1" rowspan="1" valign="top" align="left" xpos="0"><csobj w="108" h="82" t="Button" ht="../navart/nav_01_up.gif"><a href="overview.html" target="bodyframe" onmouseover="return CSIShow(/*CMP*/'Game Overview',1)" onmouseout="return CSIShow(/*CMP*/'Game Overview',0)" onclick="return CSButtonReturn()"><img src="../navart/nav_01_dn.gif" width="108" height="82" name="Game Overview" border="0"></a></csobj></td>
+					<td width="136" height="82" colspan="1" rowspan="1" valign="top" align="left" xpos="108"><csobj w="136" h="82" t="Button" ht="../navart/nav_02_up.gif"><a href="installation.html" target="bodyframe" onmouseover="return CSIShow(/*CMP*/'Installation',1)" onmouseout="return CSIShow(/*CMP*/'Installation',0)" onclick="return CSButtonReturn()"><img src="../navart/nav_02_dn.gif" width="136" height="82" name="Installation" border="0"></a></csobj></td>
+					<td width="106" height="82" colspan="1" rowspan="1" valign="top" align="left" xpos="244"><csobj w="106" h="82" t="Button" ht="../navart/nav_03_up.gif"><a href="arena.html" target="bodyframe" onmouseover="return CSIShow(/*CMP*/'Arena Eternal',1)" onmouseout="return CSIShow(/*CMP*/'Arena Eternal',0)" onclick="return CSButtonReturn()"><img src="../navart/nav_03_dn.gif" width="106" height="82" name="Arena Eternal" border="0"></a></csobj></td>
+					<td width="73" height="82" colspan="1" rowspan="1" valign="top" align="left" xpos="350"><csobj w="73" h="82" t="Button" ht="../navart/nav_04_up.gif"><a href="main.html" target="bodyframe" onmouseover="return CSIShow(/*CMP*/'MainMenu',1)" onmouseout="return CSIShow(/*CMP*/'MainMenu',0)" onclick="return CSButtonReturn()"><img src="../navart/nav_04_dn.gif" width="73" height="82" name="MainMenu" border="0"></a></csobj></td>
+					<td width="73" height="82" colspan="1" rowspan="1" valign="top" align="left" xpos="423"><csobj w="73" h="82" t="Button" ht="../navart/nav_05_up.gif"><a href="escmenu.html" target="bodyframe" onmouseover="return CSIShow(/*CMP*/'EscMenu',1)" onmouseout="return CSIShow(/*CMP*/'EscMenu',0)" onclick="return CSButtonReturn()"><img src="../navart/nav_05_dn.gif" width="73" height="82" name="EscMenu" border="0"></a></csobj></td>
+					<td width="102" height="82" colspan="1" rowspan="1" valign="top" align="left" xpos="496"><csobj w="102" h="82" t="Button" ht="../navart/nav_06_up.gif"><a href="default.html" target="bodyframe" onmouseover="return CSIShow(/*CMP*/'DefaultHot',1)" onmouseout="return CSIShow(/*CMP*/'DefaultHot',0)" onclick="return CSButtonReturn()"><img src="../navart/nav_06_dn.gif" width="102" height="82" name="DefaultHot" border="0"></a></csobj></td>
+					<td width="108" height="82" colspan="1" rowspan="1" valign="top" align="left" xpos="598"><csobj w="108" h="82" t="Button" ht="../navart/nav_07_up.gif"><a href="customer.html" target="bodyframe" onmouseover="return CSIShow(/*CMP*/'Button7',1)" onmouseout="return CSIShow(/*CMP*/'Button7',0)" onclick="return CSButtonReturn()"><img src="../navart/nav_07_dn.gif" width="108" height="82" name="Button7" border="0"></a></csobj></td>
+					<td width="90" height="82" colspan="1" rowspan="1" valign="top" align="left" xpos="706"><csobj w="90" h="82" t="Button" ht="../navart/nav_08_up.gif"><a href="credits.html" target="bodyframe" onmouseover="return CSIShow(/*CMP*/'Credits',1)" onmouseout="return CSIShow(/*CMP*/'Credits',0)" onclick="return CSButtonReturn()"><img src="../navart/nav_08_dn.gif" width="90" height="82" name="Credits" border="0"></a></csobj></td>
+				</tr>
+			</table>
+		</center>
+	</body>
+
+</html>

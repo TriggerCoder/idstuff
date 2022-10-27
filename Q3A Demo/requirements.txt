@@ -1,0 +1,38 @@
+QUAKE III: ARENA
+
+MINIMUM SYSTEM REQUIREMENTS
+·	3-D Hardware Accelerator with full OpenGL® support*
+·	Pentium® 233Mhz MMX® processor with 8 MB Video Card
+	or Pentium II 266Mhz processor with 4 MB Video Card
+	or AMD® 350Mhz K6®-2 processor with 4 MB Video Card
+·	64 MB RAM
+·	A 100% Windows® 95/98/NT 4.0 compatible computer system 
+	(including compatible 32-bit drivers for CD-ROM drive, video card,
+	sound card and input devices)
+·	Windows 95/98/NT 4.0 (with Service Pack 3) operating system
+·	25 MB of uncompressed hard disk space for game files (Minimum Install),
+	plus 45 MB for the Windows swap file
+·	Quad-speed CD-ROM drive (600 K/sec. sustained transfer rate)
+·	100% DirectX 3.0 or higher compatible sound card
+·	100% Microsoft-compatible mouse and driver
+·	100% Windows 95/98/NT 4.0 compatible joystick (optional)
+·	Multiplayer Requirements:
+·	Internet (TCP/IP) and LAN (TCP/IP and IPX) play supported
+·	Internet play requires a 100% Windows 95/98/NT 4.0-compatible 28.8 Kbps
+	(or faster) modem
+
+
+* A 100% full OpenGL compliant 3-D video card is required.  Quake III Arena uses
+OpenGL to support 3-D hardware acceleration.  Quake III Arena has been tested
+on many but not all of the major cards incorporating the chipsets listed below.
+For the most recent list of cards and drivers supported, please visit www.activision.com.
+
+·	All 3dfx chips	
+·	nVIDIA Riva 128 and 128ZX 	
+·	Matrox G200 & G400
+·	ATI Rage Pro & Rage128	
+·	nVIDIA Riva TNT and TNT2	
+·	Intel i740
+·	S3 Savage 4	
+·	nVIDIA GeForce 256	
+

@@ -1,0 +1,499 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Dedicated Server</title>
+</head>
+
+<body bgcolor="#000000" text="#FFFFFF" link="#FF0000" vlink="#0000FF">
+
+<p align="center"><img border="0" src="DocsArt/Header.jpg" width="166" height="166"></p>
+
+<p align="center"><u><span style="mso-bidi-font-family: Times New Roman"><b style="mso-bidi-font-weight: normal; mso-bidi-font-family: Times New Roman">Quake
+III Arena Dedicated Server Documentation </b></span></u><span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;"><b style="mso-bidi-font-weight:normal"><o:p>
+</o:p>
+</b><o:p>
+</o:p>
+ <o:p>
+</o:p>
+</span></p>
+<p><span style="mso-bidi-font-family: Times New Roman">A dedicated server is useful for
+servers that will be run on the internet or LAN for extended periods of time
+and/or will experience a high number of attached clients.<span style="mso-spacerun: yes">&nbsp;
+</span>The following lists the most commonly used settings for a dedicated
+server.<o:p>
+</o:p>
+<o:p>
+</o:p>
+</span></p>
+<p><u><b style="mso-bidi-font-weight:normal"><span style="mso-bidi-font-family: Times New Roman">Starting
+the Serve</span></b><span style="mso-bidi-font-family: Times New Roman"><b style="mso-bidi-font-weight: normal; mso-bidi-font-family: Times New Roman">r</b></span></u></p>
+<p><span style="mso-bidi-font-family: Times New Roman">To start a server that does not
+report to the master server, use the following command line convention:<o:p>
+</o:p>
+</span></p>
+<p>&nbsp;&nbsp;&nbsp; <span style="font-family:&quot;Courier New&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;"><o:p>
+</o:p>
+ <b style="mso-bidi-font-weight:normal">quake3.exe
++set dedicated 1</b><o:p>
+</o:p>
+</span></p>
+<p><span style="mso-bidi-font-family: Times New Roman"><o:p>
+</o:p>
+ To start a server that notifies the master server of its
+presence, use the following command line convention:<o:p>
+</o:p>
+</span></p>
+<p>&nbsp;&nbsp;&nbsp; <span style="mso-bidi-font-family: Times New Roman"><b style="mso-bidi-font-weight:normal">quake3.exe
++set dedicated 2<o:p>
+</o:p>
+</b></span></p>
+<p><b style="mso-bidi-font-weight:normal"><u><span style="mso-bidi-font-family: Times New Roman">Command
+Line Options</span></u></b><span style="font-family: Courier New; mso-bidi-font-family: Times New Roman"><o:p>
+</o:p>
+ &nbsp;<o:p>
+</o:p>
+</span></p>
+<p><span style="mso-bidi-font-family: Times New Roman">Command line options must be set on
+the command line and will not work if executed in a config file.</span></p>
+<p><b style="mso-bidi-font-weight:normal"><span style="mso-bidi-font-family: Times New Roman">com_hunkmegs</span></b><span style="mso-bidi-font-family: Times New Roman"><o:p>
+</o:p>
+</span></p>
+<p><span style="mso-bidi-font-family: Times New Roman">com_hunkmegs - allocates a certain
+amount of memory for map and item loading.<span style="mso-spacerun: yes">&nbsp;
+</span>The default of <b style="mso-bidi-font-weight:normal">56</b> is required
+for the client but is overkill for a dedicated server, and thus wasting precious
+server memory.<span style="mso-spacerun: yes">&nbsp; </span>For general use free
+for all, tournament maps, and team deathmatch, a com_hunkmegs setting of <b style="mso-bidi-font-weight:
+normal">16</b> is sufficient.<span style="mso-spacerun: yes">&nbsp; </span>Using
+the included tournament maps only, a com_hunkmegs<b style="mso-bidi-font-weight:
+normal"> </b>setting of <b style="mso-bidi-font-weight:normal">12</b> may be
+used to conserve more memory.<span style="mso-spacerun: yes">&nbsp; </span>Capture
+The Flag requires a minimum com_hunkmegs setting of <b style="mso-bidi-font-weight:
+normal">26</b> with the included maps.<o:p>
+</o:p>
+</span></p>
+<p><b style="mso-bidi-font-weight:normal"><span style="mso-bidi-font-family: Times New Roman">NOTE</span></b><span style="mso-bidi-font-family: Times New Roman">:
+user made or future map releases may require a higher setting.<span style="mso-spacerun: yes; font-family: Courier New; mso-bidi-font-family: Times New Roman">&nbsp;
+</span>If you receive an ERROR: Hunk_Alloc failed then try increasing the
+com_hunkmegs setting in increments of 2 until the map successfully loads.<o:p></span></p>
+<p><span style="mso-bidi-font-family: Times New Roman">Usage: <b style="mso-bidi-font-weight:normal">+set
+com_hunkmegs &lt;##</b><b style="mso-bidi-font-weight: normal; font-family: Courier New; mso-bidi-font-family: Times New Roman">&gt;<br>
+</b>Sample: <b style="mso-bidi-font-weight:normal">quake3.exe +set
+dedicated 1 +set</b><b style="mso-bidi-font-weight: normal; font-family: Courier New; mso-bidi-font-family: Times New Roman">
+</b><b style="mso-bidi-font-weight:normal">com_hunkmegs 16</b><o:p>
+</o:p>
+</span></p>
+<p><b style="mso-bidi-font-weight:normal"><span style="mso-bidi-font-family: Times New Roman">net_ip</span></b><span style="mso-bidi-font-family: Times New Roman"><o:p>
+</o:p>
+</span></p>
+<p><span style="mso-bidi-font-family: Times New Roman">If you are on a multi-homed server
+and the default IP is not what you want to use for your Quake 3 server, the
+net_ip command will need to be used.<span style="mso-spacerun: yes">&nbsp; </span>This
+must be set on the command line in the following form.<o:p>
+</o:p>
+</span></p>
+<p><span style="mso-bidi-font-family: Times New Roman">Usage: <b style="mso-bidi-font-weight:normal">+set
+net_ip &lt;ip address&gt;</b><o:p>
+</o:p>
+<br>
+Sample: <b style="mso-bidi-font-weight:normal">quake3.exe +set dedicated 1 +set
+net_ip 192.168.0.0</b><o:p>
+</o:p>
+ <o:p>
+</o:p>
+</span></p>
+<p><b style="mso-bidi-font-weight:normal"><span style="mso-bidi-font-family: Times New Roman">net_port</span></b><span style="mso-bidi-font-family: Times New Roman"><o:p>
+</o:p>
+</span></p>
+<p><span style="mso-bidi-font-family: Times New Roman">Changing the default server port
+requires the net_port command be run on the command line.<span style="mso-spacerun: yes">&nbsp;
+</span>It is useful for running multiple servers on the same computer or making
+the server somewhat more private.<span style="mso-spacerun: yes">&nbsp; </span>The
+default port is 27960 and is incremented automatically by 1 if another server is
+started without a specified port.<o:p>
+</o:p>
+</span></p>
+<p><span style="mso-bidi-font-family: Times New Roman">Usage: <b style="mso-bidi-font-weight:normal">+set
+net_port &lt;port&gt;</b><o:p>
+</o:p>
+<br>
+Sample: <b style="mso-bidi-font-weight:normal">quake3.exe
++set dedicated 1 +set net_port 27961</b><o:p>
+</o:p>
+</span></p>
+<p><u><span style="mso-bidi-font-family: Times New Roman"><b style="mso-bidi-font-weight: normal; mso-bidi-font-family: Times New Roman">Configuration
+Files</b></span></u><span style="font-family: Courier New; mso-bidi-font-family: Times New Roman"><o:p>
+</o:p>
+ <o:p>
+</o:p>
+ <o:p>
+</o:p>
+</span></p>
+<p><span style="mso-bidi-font-family: Times New Roman">To simplify setting up a dedicated
+server, a several server configurations file have been created for different
+game types.<span style="mso-spacerun: yes">&nbsp; </span>You can modify each
+configuration file to your liking if the default settings are not sufficient.<span style="mso-spacerun: yes">&nbsp;
+</span>If you wish, you may run these config files from the console, assuming
+com_hunkmegs is sufficient for each game type.<span style="mso-spacerun: yes">&nbsp;
+</span>Use the following console command convention to run configs.<o:p>
+</o:p>
+</span></p>
+<p>&nbsp;&nbsp; <span style="mso-bidi-font-family: Times New Roman"><b style="mso-bidi-font-weight:normal">exec
+&lt;gametype.config&gt;</b><o:p>
+</o:p>
+</span></p>
+<p><span style="mso-bidi-font-family: Times New Roman">The following are sample command
+lines to get you quickly up and running for each game type.<o:p>
+</o:p>
+ <o:p>
+</o:p>
+</span></p>
+<p><b style="mso-bidi-font-weight:normal"><span style="mso-bidi-font-family: Times New Roman">Free
+For All</span></b><span style="font-family: Courier New; mso-bidi-font-family: Times New Roman"><o:p>
+</o:p>
+<br>
+quake3.exe +set dedicated 1 +set
+com_hunkmegs 16 +exec ffa.config<o:p>
+</o:p>
+</span></p>
+<p><b style="mso-bidi-font-weight:normal"><span style="mso-bidi-font-family: Times New Roman">Tournament<o:p>
+</o:p>
+<br>
+</span></b><span style="mso-bidi-font-family: Times New Roman">quake3.exe +set dedicated 1 +set
+com_hunkmegs 12 +exec tourney.config<o:p>
+</o:p>
+</span></p>
+<p><b style="mso-bidi-font-weight:normal"><span style="mso-bidi-font-family: Times New Roman">Team
+Deathmatch<o:p>
+</o:p>
+<br>
+</span></b><span style="mso-bidi-font-family: Times New Roman">quake3.exe +set dedicated 1 +set
+com_hunkmegs 16 +exec teamplay.config<o:p>
+</o:p>
+</span></p>
+<p><b style="mso-bidi-font-weight:normal"><span style="mso-bidi-font-family: Times New Roman">Capture
+The Flag</span></b><span style="font-family: Courier New; mso-bidi-font-family: Times New Roman"><o:p>
+</o:p>
+<br>
+quake3.exe +set dedicated 1 +set
+com_hunkmegs 26 +exec ctf.config<o:p>
+</o:p>
+</span></p>
+<p><u><span style="mso-bidi-font-family: Times New Roman"><b style="mso-bidi-font-weight: normal; mso-bidi-font-family: Times New Roman">Server
+Only Settings</b></span></u><span style="font-family: Courier New; mso-bidi-font-family: Times New Roman"><o:p>
+</o:p>
+ <o:p>
+</o:p>
+</span></p>
+<p><span style="mso-bidi-font-family: Times New Roman">Server settings are only used only
+on the server and may be used at the console or command line.<span style="mso-spacerun: yes">&nbsp;
+</span>Command line usage requires a <b style="mso-bidi-font-weight:normal">+set</b>
+before each command.</span></p>
+<p>&nbsp;&nbsp; <span style="mso-bidi-font-family: Times New Roman">For example: <b style="mso-bidi-font-weight:normal">+set
+sv_maxclients 16</b><o:p>
+</o:p>
+ <o:p>
+</o:p>
+</span></p>
+<p><b style="mso-bidi-font-weight:normal"><span style="mso-bidi-font-family: Times New Roman">sv_maxclients</span></b><span style="font-family: Courier New; mso-bidi-font-family: Times New Roman"><o:p>
+</o:p>
+<br>
+sv_maxclients - sets the maximum
+amount of clients that can connect to the server.<span style="mso-spacerun: yes">&nbsp;
+</span>The default setting is 8.<span style="mso-spacerun: yes">&nbsp; </span>Setting
+should be increased for large free for all, team deathmatch, or CTF maps.<o:p>
+</o:p>
+</span></p>
+<p>&nbsp;&nbsp;&nbsp; <span style="mso-bidi-font-family: Times New Roman">Usage: <b style="mso-bidi-font-weight:normal">sv_maxclients
+&lt;##&gt;</b><o:p>
+</o:p>
+</span></p>
+<p><b style="mso-bidi-font-weight:normal"><span style="mso-bidi-font-family: Times New Roman">sv_privatePassword</span></b><span style="font-family: Courier New; mso-bidi-font-family: Times New Roman"><o:p>
+</o:p>
+<br>
+sv_privatePassword - sets a password
+on the server so only clients that know the password can connect to the server.<span style="mso-spacerun: yes">&nbsp;
+</span>Clients use the \password command.<span style="mso-spacerun: yes">&nbsp; </span>The
+default is for no password required.<span style="mso-spacerun: yes">&nbsp; </span>Set
+to &quot;&quot; for no password.
+</span></p>
+<p>&nbsp;&nbsp;&nbsp; <span style="mso-bidi-font-family: Times New Roman">Usage: <b style="mso-bidi-font-weight:normal">sv_privatePassword
+&quot;&lt;password&gt;&quot;</b><o:p>
+</o:p>
+</span></p>
+<p><b style="mso-bidi-font-weight:normal"><span style="mso-bidi-font-family: Times New Roman">sv_hostname<o:p>
+</o:p>
+<br>
+</span></b><span style="mso-bidi-font-family: Times New Roman">sv_hostname - sets the server name
+that will show up in the master server list.<span style="mso-spacerun: yes">&nbsp;
+</span>The name must be enclosed in quotes if a space is in the name.</span></p>
+<p>&nbsp;&nbsp; <span style="mso-bidi-font-family: Times New Roman">Usage: <b style="mso-bidi-font-weight:normal">sv_hostname
+&quot;&lt;servername&gt;&quot;</b><o:p>
+</o:p>
+</span></p>
+<p><b style="mso-bidi-font-weight:normal"><span style="mso-bidi-font-family: Times New Roman">sv_master1<o:p>
+</o:p>
+<br>
+</span></b><span style="mso-bidi-font-family: Times New Roman">sv_master1 - sets the primary master
+server to which your server reports.<span style="mso-spacerun: yes">&nbsp; </span>The
+default is master3.idsoftware.com and it is not recommended that this be changed.<span style="mso-spacerun: yes">&nbsp;
+</span>Additional master servers can be added with the sv_master2 through 5
+command.<span style="mso-spacerun: yes">&nbsp; </span>The maximum number of
+masters that can be reported to is 5.<o:p>
+</o:p>
+</span></p>
+<p>&nbsp;&nbsp; <span style="mso-bidi-font-family: Times New Roman">Usage: <b style="mso-bidi-font-weight:normal">sv_master2
+&lt;master.domain.com&gt;</b><o:p>
+</o:p>
+</span></p>
+<p><b style="mso-bidi-font-weight:normal"><span style="mso-bidi-font-family: Times New Roman">sv_maxRate</span></b><span style="font-family: Courier New; mso-bidi-font-family: Times New Roman"><o:p>
+</o:p>
+<br>
+sv_maxRate - sets the maximum
+allowable rate a client may have set when connected to the server.<span style="mso-spacerun: yes">&nbsp;
+</span>The default is 0, which is no limit.<span style="mso-spacerun: yes">&nbsp;
+</span>A suggested setting is 8000 or 10000 so server bandwidth is not used up
+by high speed clients, thus allowing modem players to have a smoother game.<o:p>
+</o:p>
+</span></p>
+<p>&nbsp;&nbsp; <span style="mso-bidi-font-family: Times New Roman">Usage: <b style="mso-bidi-font-weight:normal">sv_maxRate
+&lt;#####&gt;</b><o:p>
+</o:p>
+</span></p>
+<p><b style="mso-bidi-font-weight:normal"><span style="mso-bidi-font-family: Times New Roman">sv_pure<o:p>
+</o:p>
+<br>
+</span></b><span style="mso-bidi-font-family: Times New Roman">sv_pure - controls crc/zip check of
+client pk3 files to make sure the pk3 file has not been modified for cheating or
+other purposes.<span style="mso-spacerun: yes">&nbsp; </span>Client pk3 files
+must match that of the server to connect.<span style="mso-spacerun: yes">&nbsp; </span>The
+default is set to 1, or on. Set to 0 to turn off check.</span></p>
+<p>&nbsp;&nbsp; <span style="mso-bidi-font-family: Times New Roman">Usage: <b style="mso-bidi-font-weight:normal">sv_pure
+1</b><o:p>
+</o:p>
+</span></p>
+<p><u><span style="mso-bidi-font-family: Times New Roman"><b style="mso-bidi-font-weight: normal; mso-bidi-font-family: Times New Roman">Server
+Console Commands</b></span></u></p>
+<p><span style="mso-bidi-font-family: Times New Roman">Server console commands are used
+from the server console or the remote console.<o:p>
+</o:p>
+</span></p>
+<p><b style="mso-bidi-font-weight:normal"><span style="mso-bidi-font-family: Times New Roman">status</span></b><span style="font-family: Courier New; mso-bidi-font-family: Times New Roman"><o:p>
+</o:p>
+<br>
+status - shows the client number
+(num), score, ping, player name (name), client IP address (address), and port
+connected through (qport).<span style="mso-spacerun: yes">&nbsp; </span>Client
+number is used in conjunction with the <b style="mso-bidi-font-weight:normal">kick</b>
+command.
+</span></p>
+<p>&nbsp;&nbsp; <span style="mso-bidi-font-family: Times New Roman">Usage: <b style="mso-bidi-font-weight:normal">status</b><o:p>
+</o:p>
+</span></p>
+<p><b style="mso-bidi-font-weight:normal"><span style="mso-bidi-font-family: Times New Roman">kick</span></b><span style="font-family: Courier New; mso-bidi-font-family: Times New Roman"><o:p>
+</o:p>
+<br>
+kick - removes a player from the
+server. Particularly useful for removing disruptive players.<span style="mso-spacerun: yes">&nbsp;
+</span>To kick a player, first find the number (num) associated with the player
+name via the <b style="mso-bidi-font-weight:normal">status</b> command.
+</span></p>
+<p>&nbsp;&nbsp; <span style="mso-bidi-font-family: Times New Roman">Usage: <b style="mso-bidi-font-weight:normal">kick
+&lt;num&gt;</b><o:p>
+</o:p>
+</span></p>
+<p><b style="mso-bidi-font-weight:normal"><span style="mso-bidi-font-family: Times New Roman">capturelimit</span></b><span style="font-family: Courier New; mso-bidi-font-family: Times New Roman"><o:p>
+</o:p>
+<br>
+capturelimit - sets the number of
+flag captures that must be reached before the level ends and the next level
+starts in CTF.<span style="mso-spacerun: yes">&nbsp; </span>Setting capturelimit
+only has an effect if the server is in CTF mode.
+</span></p>
+<p>&nbsp;&nbsp; <span style="mso-bidi-font-family: Times New Roman">Usage: <b style="mso-bidi-font-weight:normal">capturelimit
+&lt;##&gt;</b><o:p>
+</o:p>
+</span></p>
+<p><b style="mso-bidi-font-weight:normal"><span style="mso-bidi-font-family: Times New Roman">fraglimit<o:p>
+</o:p>
+<br>
+</span></b><span style="mso-bidi-font-family: Times New Roman">fraglimit - sets the amount of frags
+that much be reached before the level ends and the next level starts.<span style="mso-spacerun:
+yes">&nbsp; </span>Setting fraglimit to 0 results in no fraglimit.</span></p>
+<p>&nbsp;&nbsp; <span style="mso-bidi-font-family: Times New Roman">Usage: <b style="mso-bidi-font-weight:normal">fraglimit
+&lt;##&gt;</b><o:p>
+</o:p>
+</span></p>
+<p><b style="mso-bidi-font-weight:normal"><span style="mso-bidi-font-family: Times New Roman">timelimit<o:p>
+</o:p>
+<br>
+</span></b><span style="mso-bidi-font-family: Times New Roman">timelimit - sets the number of
+minutes that must be reached before the level ends and the next level starts.<span style="mso-spacerun:
+yes">&nbsp; </span>Setting timelimit to 0 results in no fraglimit.</span></p>
+<p>&nbsp;&nbsp; <span style="mso-bidi-font-family: Times New Roman">Usage: <b style="mso-bidi-font-weight:normal">timelimit
+&lt;#min&gt;</b><o:p>
+</o:p>
+</span></p>
+<p><b style="mso-bidi-font-weight:normal"><span style="mso-bidi-font-family: Times New Roman">rconpassword<br>
+</span></b><span style="mso-bidi-font-family: Times New Roman">rconpassword - sets remote console
+password so clients may change server settings without direct access to the
+server console.<span style="mso-spacerun: yes">&nbsp; </span>The default is set
+to none.<span style="mso-spacerun: yes">&nbsp; </span>Client can control the
+server by entering commands on the console with the format of \rconpassword
+mypass and then adding server commands after the \rcon command.<o:p>
+</o:p>
+</span></p>
+<p>&nbsp;&nbsp; <span style="mso-bidi-font-family: Times New Roman">Usage: <b style="mso-bidi-font-weight:normal">rconpassword
+&lt;serverpassword&gt;</b><o:p>
+</o:p>
+</span></p>
+<p><b style="mso-bidi-font-weight:normal"><span style="mso-bidi-font-family: Times New Roman">killserver</span></b><span style="font-family: Courier New; mso-bidi-font-family: Times New Roman"><o:p>
+</o:p>
+<br>
+killserver - will stop all server
+services from running but leaves the Quake III Arena executable running on the
+server.
+</span></p>
+<p>&nbsp;&nbsp; <span style="mso-bidi-font-family: Times New Roman">Usage: <b style="mso-bidi-font-weight:normal">killserver</b><o:p>
+</o:p>
+</span></p>
+<p><u><span style="mso-bidi-font-family: Times New Roman"><b style="mso-bidi-font-weight: normal; mso-bidi-font-family: Times New Roman">Game
+Commands</b></span></u><span style="mso-bidi-font-family: Times New Roman"><o:p>
+</o:p>
+ <o:p>
+</o:p>
+ <o:p>
+</o:p>
+</span></p>
+<p><span style="mso-bidi-font-family: Times New Roman">Generally, all game commands must be
+entered after the level loads either in the config file or on the command
+line/console.<span style="mso-spacerun: yes">&nbsp; </span>Exceptions include
+the <b style="mso-bidi-font-weight:
+normal">g_gametype</b> and <b style="mso-bidi-font-weight:normal">g_motd</b>
+command.<span style="mso-spacerun: yes">&nbsp; </span>The following are the most
+useful game commands for a dedicated server.<o:p>
+</o:p>
+</span></p>
+<p><b style="mso-bidi-font-weight:normal"><span style="mso-bidi-font-family: Times New Roman">g_warmup<o:p>
+</o:p>
+<br>
+</span></b><span style="mso-bidi-font-family: Times New Roman">g_warmup - sets the amount of time
+in seconds that players may practice before the actual tournament match starts.<span style="mso-spacerun: yes">&nbsp;
+</span>The default is 20 seconds.<o:p>
+</o:p>
+</span></p>
+<p><span style="mso-bidi-font-family: Times New Roman">&nbsp;&nbsp;&nbsp; Usage: <b style="mso-bidi-font-weight:normal">g_warmup
+&lt;#seconds&gt;</b><o:p>
+</o:p>
+</span></p>
+<p><b style="mso-bidi-font-weight:normal"><span style="mso-bidi-font-family: Times New Roman">g_friendlyFire</span></b><span style="mso-bidi-font-family: Times New Roman"><o:p>
+</o:p>
+<br>
+g_friendlyFire - determines if players can damage
+their own teammates.<span style="mso-spacerun: yes">&nbsp; </span>Set to 1 to
+allow players to damage their own teammates.<span style="mso-spacerun: yes">&nbsp;
+</span>Set to 0 so players can not damage their own teammates.<span style="mso-spacerun: yes">&nbsp;
+</span>Setting has no effect for free-for-all or tournament modes.<span style="mso-spacerun: yes">&nbsp;
+</span>A setting of 1 is suggested for team deathmatch, while a setting of 0 is
+suggested for Capture The Flag.
+</span></p>
+<p>&nbsp;&nbsp; <span style="mso-bidi-font-family: Times New Roman">Usage: <b style="mso-bidi-font-weight:normal">g_friendlyFire
+1</b></span></p>
+<p><b style="mso-bidi-font-weight:normal"><span style="mso-bidi-font-family: Times New Roman">g_gametype<o:p>
+</o:p>
+<br>
+</span></b><span style="mso-bidi-font-family: Times New Roman">g_gametype - controls the type of
+gameplay (free for all, tournament, team deathmatch, CTF).<span style="mso-spacerun: yes">&nbsp;
+</span>The default is 0, which is for free for all. Set to 1 for tournament 1 on
+1 mode.<span style="mso-spacerun: yes">&nbsp; </span>Set to 3 for team
+deathmatch mode. Set to 4 for CTF mode.<o:p>
+</o:p>
+</span></p>
+<p>&nbsp;&nbsp; <span style="mso-bidi-font-family: Times New Roman">Usage: <b style="mso-bidi-font-weight:normal">g_gametype
+&lt;#&gt;</b><o:p>
+</o:p>
+</span></p>
+<p><b style="mso-bidi-font-weight:normal"><span style="mso-bidi-font-family: Times New Roman">g_motd</span></b><span style="font-family: Courier New; mso-bidi-font-family: Times New Roman"><o:p>
+</o:p>
+<br>
+g_motd - sets the message that
+clients will see when they first connect to your server.
+</span></p>
+<p>&nbsp;&nbsp; <span style="mso-bidi-font-family: Times New Roman">Usage: <b style="mso-bidi-font-weight:normal">g_motd
+&quot;message of the day&quot;</b><o:p>
+</o:p>
+</span></p>
+<p><b style="mso-bidi-font-weight:normal"><span style="mso-bidi-font-family: Times New Roman">g_log</span></b><span style="font-family: Courier New; mso-bidi-font-family: Times New Roman"><o:p>
+</o:p>
+<br>
+g_log - sets the name of the server
+log file.<span style="mso-spacerun: yes">&nbsp; </span>The default is <b style="mso-bidi-font-weight:
+normal">games.log</b> and does not need to be modified unless running multiple
+dedicated servers on the same computer.<o:p>
+</o:p>
+</span></p>
+<p>&nbsp;&nbsp; <span style="mso-bidi-font-family: Times New Roman">Usage: <b style="mso-bidi-font-weight:normal">g_log
+&lt;filename.ext&gt;</b><o:p>
+</o:p>
+</span></p>
+<p><b style="mso-bidi-font-weight:normal"><span style="mso-bidi-font-family: Times New Roman">g_quadfactor</span></b><span style="font-family: Courier New; mso-bidi-font-family: Times New Roman"><o:p>
+</o:p>
+<br>
+g_quadfactor - used to set multiples
+of damage caused by the quad damage powerup.<span style="mso-spacerun: yes">&nbsp;
+</span>The default is 3 times damage, with 1 being equal to no quad damage
+powerup.<span style="mso-spacerun: yes">&nbsp; </span>Decimals may be used (e.g.
+0.25).<o:p>
+</o:p>
+</span></p>
+<p>&nbsp;&nbsp; <span style="mso-bidi-font-family: Times New Roman">Usage: <b style="mso-bidi-font-weight:normal">g_quadfactor
+&lt;#&gt;</b><o:p>
+</o:p>
+</span></p>
+<p><b style="mso-bidi-font-weight:normal"><span style="mso-bidi-font-family: Times New Roman">g_syncronousclients</span></b><span style="font-family: Courier New; mso-bidi-font-family: Times New Roman"><o:p>
+</o:p>
+<br>
+g_syncronousclients - syncs all
+clients up to allow demo recording. The default is the more desired 0 which
+allows smoother net play.<span style="mso-spacerun: yes">&nbsp; </span>Set to 1
+to allow client demo recording.
+</span></p>
+<p>&nbsp;&nbsp; <span style="mso-bidi-font-family: Times New Roman">Usage: <b style="mso-bidi-font-weight:normal">g_syncronousclients
+0</b><o:p>
+</o:p>
+</span></p>
+<p><b style="mso-bidi-font-weight:normal"><span style="mso-bidi-font-family: Times New Roman">g_weaponsrespawn</span></b><span style="font-family: Courier New; mso-bidi-font-family: Times New Roman"><o:p>
+</o:p>
+<br>
+g_weaponsrespawn - used to set the
+number of seconds between the time a weapon is picked up and the time it
+respawns.<span style="mso-spacerun: yes">&nbsp; </span>The default is 5 seconds
+in free for all and should only be modified if a free for all server has a large
+number of players on it, in which case lower it slightly.<span style="mso-spacerun: yes">&nbsp;
+</span>It is not recommend that it be set to 0 or modified for other game types.
+</span></p>
+<p>&nbsp;&nbsp; <span style="mso-bidi-font-family: Times New Roman">Usage: <b style="mso-bidi-font-weight:normal">g_weaponrespawn
+&lt;#seconds&gt;</b><o:p>
+</o:p>
+</span></p>
+<p><b style="mso-bidi-font-weight:normal"><span style="mso-bidi-font-family: Times New Roman">g_allowvote</span></b><span style="font-family: Courier New; mso-bidi-font-family: Times New Roman"><o:p>
+</o:p>
+<br>
+g_allowvote - enable players
+connected to the server to call for and vote on changes including: map, map
+restart, kick, and g_gametype.<span style="mso-spacerun: yes">&nbsp; </span>The
+default is 1, which is on.<span style="mso-spacerun: yes">&nbsp; </span>Set to 0
+to turn off voting.<o:p>
+</o:p>
+</span></p>
+<p>&nbsp;&nbsp;&nbsp; <span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">Usage:
+<b style="mso-bidi-font-weight:
+normal">g_allowvote 1</b></span></p>
+
+</body>
+
+</html>

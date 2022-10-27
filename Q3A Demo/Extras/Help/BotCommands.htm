@@ -1,0 +1,598 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Quake III Arena Bot Commands</title>
+</head>
+
+<body bgcolor="#000000" text="#FFFFFF" link="#FF0000" vlink="#0000FF">
+
+<p class="MsoNormal" align="center"><img border="0" src="DocsArt/Header.jpg" width="166" height="166"></p>
+
+<p class="MsoNormal" align="center"><u><b><font face="Arial" size="3">Quake III
+Arena Bot Commands</font></b></u></p>
+<span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">IMPORTANT
+NOTE:<span style="mso-spacerun: yes">&nbsp; </span>The command for chatting with
+your team&nbsp; is <b>\say_team</b>.<span style="mso-spacerun: yes">&nbsp; </span>This
+command should preface every command listed below in the command column.&nbsp; <b><u>You
+will want to bind a key to Say-Team in the controls section of the menu.</u></b></font></span>
+<p><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><b><u><font face="Arial" size="3">Default
+Hot Key for Team Orders</font><font face="Arial" size="2"><br>
+</font></u></b><font face="Arial" size="2">Press the function key F3 (default)
+as a shortcut to access the Team Orders menu.</font></span></p>
+<p><u><span style="mso-bidi-font-size: 10.0pt"><b><font face="Arial" size="3">Location
+and Object Abbreviations:</o:p>
+ <o:p>
+</font></b><br>
+</span></u><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">Wherever
+you see the <b>&lt;loc/obj&gt;</b> variable, substitute one of the following
+abbreviations or you can type the complete word(s).</font></span></p>
+<table border="1" width="100%" height="49">
+  <tr>
+    <td width="3%" height="19"><b><font face="Arial" size="2">ra</font></b></td>
+    <td width="17%" height="19"><font face="Arial" size="2">Red Armor</font></td>
+    <td width="3%" height="19"><b><font face="Arial" size="2">sg</font></b></td>
+    <td width="17%" height="19"><font face="Arial" size="2">Shotgun</font></td>
+    <td width="3%" height="19"><b><font face="Arial" size="2">pg</font></b></td>
+    <td width="17%" height="19"><font face="Arial" size="2">Plasma Gun</font></td>
+    <td width="5%" height="19"><b><font face="Arial" size="2">bfg</font></b></td>
+    <td width="15%" height="19"><font face="Arial" size="2">BFG10k</font></td>
+    <td width="5%" height="19"><b><font face="Arial" size="2">invis</font></b></td>
+    <td width="15%" height="19"><font face="Arial" size="2">Invisibility</font></td>
+  </tr>
+  <tr>
+    <td width="3%" height="18"><b><font face="Arial" size="2">ya</font></b></td>
+    <td width="17%" height="18"><font face="Arial" size="2">Yellow Armor</font></td>
+    <td width="3%" height="18"><b><font face="Arial" size="2">gl</font></b></td>
+    <td width="17%" height="18"><font face="Arial" size="2">Grenade Launcher</font></td>
+    <td width="3%" height="18"><b><font face="Arial" size="2">lg</font></b></td>
+    <td width="17%" height="18"><font face="Arial" size="2">Lightning Gun</font></td>
+    <td width="5%" height="18"><b><font face="Arial" size="2">quad</font></b></td>
+    <td width="15%" height="18"><font face="Arial" size="2">Quad Damage</font></td>
+    <td width="5%" height="18"><b><font face="Arial" size="2">bs</font></b></td>
+    <td width="15%" height="18"><font face="Arial" size="2">Battle Suit</font></td>
+  </tr>
+  <tr>
+    <td width="3%" height="18"><b><font face="Arial" size="2">mg</font></b></td>
+    <td width="17%" height="18"><font face="Arial" size="2">Machinegun</font></td>
+    <td width="3%" height="18"><b><font face="Arial" size="2">rl</font></b></td>
+    <td width="17%" height="18"><font face="Arial" size="2">Rocket Launcher</font></td>
+    <td width="3%" height="18"><b><font face="Arial" size="2">rg</font></b></td>
+    <td width="17%" height="18"><font face="Arial" size="2">Railgun</font></td>
+    <td width="5%" height="18"><b><font face="Arial" size="2">regen</font></b></td>
+    <td width="15%" height="18"><font face="Arial" size="2">Regeneration</font></td>
+    <td width="5%" height="18"><b><font face="Arial" size="2">haste</font></b></td>
+    <td width="15%" height="18"><font face="Arial" size="2">Haste</font></td>
+  </tr>
+</table>
+<p class="MsoNormal"><u><span style="mso-bidi-font-size: 10.0pt"><b><font face="Arial" size="3">Individual
+Bot Commands:</o:p>
+ <o:p>
+</font></b></span></u><br>
+<font face="Arial" size="2">These are commands that you, as the leader, can give
+to any of your team members on an individual basis.<span style="mso-spacerun: yes">&nbsp;
+</span>They are designed to allow the team leader to give specific instructions
+to members of the team.</font></p>
+<p class="MsoNormal"><font face="Arial" size="2"><u>Command Variables</u>:</font><b><u><o:p>
+ </o:p>
+</u></b></p>
+<ul>
+  <li>
+    <p class="MsoNormal"><font face="Arial" size="2"><b>&lt;botname&gt;</b> -
+    refers to the bot you are giving the command TO.<span style="mso-spacerun:
+yes">&nbsp; </span>(ex. Grunt, Daemia, Stripe, everyone etc.)</font></li>
+  <li>
+    <p class="MsoNormal"><b><font face="Arial" size="2">&lt;othername&gt;</font></b><font face="Arial" size="2">
+    - refers to the other team member you want the bot to interact with. (ex. in
+    the command “Grunt follow <u>Daemia</u>”, Daemia is the &lt;othername&gt;.)<span style="mso-spacerun: yes">&nbsp;&nbsp;</span><br>
+    &nbsp;&nbsp;&nbsp; Please note:<span style="mso-spacerun: yes">&nbsp; </span>the
+    &lt;othername&gt; CAN be a human team member!!! (Grunt follow <u>Insidious</u>,
+    or Grunt follow <u>me</u>.)</font></li>
+  <li>
+    <p class="MsoNormal"><font face="Arial" size="2"><b>&lt;enemyname&gt;</b> -
+    refers to the enemy player that you’d like the bot to interact with.<span style="mso-spacerun: yes">&nbsp;
+    </span>(Interact?<span style="mso-spacerun: yes">&nbsp; </span>Nice way to
+    say “obliterate into little tiny bits of goo.”)</font></li>
+  <li>
+    <p class="MsoNormal"><font face="Arial" size="2"><b>&lt;loc/obj&gt;</b> -
+    refers to the location on the map or specific weapon or power-up you’d
+    like the bot to interact with.<span style="mso-spacerun: yes">&nbsp; </span>A
+    list of abbreviations is above.</font></li>
+  <li><font face="Arial" size="2"><b><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">xx
+    </span></b><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&lt;<b>time</b>&gt;
+    – replace xx with numerical values, and replace &lt;time&gt; with either
+    seconds or minutes (60 seconds, 5 minutes, etc.).</span></font></li>
+</ul>
+<table border="1" width="100%" height="366">
+  <tr>
+    <td width="50%" align="center" height="19"><b><u><font face="Arial" size="3">Command</font></u></b></td>
+    <td width="50%" align="center" height="19"><b><u><font face="Arial" size="3">Expected
+      Action</font></u></b></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="28"><font face="Arial" size="2">i am
+      the leader</font></td>
+    <td width="50%" align="center" height="28"><font face="Arial" size="2">This
+      will let bots know that you are the leader.&nbsp; No other bot will assume
+      command.</font></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="14"><font face="Arial" size="2">&lt;botname&gt;
+      report</font></td>
+    <td width="50%" align="center" rowspan="2" height="34"><font face="Arial" size="2">Bot
+      should tell you what they’re doing.</font></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="14"><font face="Arial" size="2">&lt;botname&gt;
+      what are you doing?</font></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="14"><font face="Arial" size="2">&lt;botname&gt;
+      follow &lt;othername&gt;</font></td>
+    <td width="50%" align="center" rowspan="12" height="234">
+      <p class="MsoNormal" align="center" style="text-align:center"><font face="Arial" size="2">All
+      these commands mean the same thing:<o:p>
+      </o:p>
+      </font></p>
+      <p class="MsoNormal" align="center" style="text-align:center"><font face="Arial" size="2">The
+      bot should follow/accompany/cover/go with the designated team member for
+      the specified time.<o:p>
+      </o:p>
+      </font></p>
+      <p class="MsoNormal" align="center" style="text-align:center"><font face="Arial" size="2">If
+      no time is specified, the bot will carry out command indefinitely.
+      (However, bots, like humans, get sick of doing the same thing over and
+      over again.<span style="mso-spacerun: yes">&nbsp; </span>They might get
+      fed up with you and go do their own thing.)<o:p>
+      </o:p>
+      </font></p>
+      <p>&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="14"><font face="Arial" size="2">&lt;botname&gt;
+      follow &lt;othername&gt; for xx &lt;time&gt;</font></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="14"><font face="Arial" size="2">&lt;botname&gt;
+      follow &lt;othername&gt; forever</font></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="14"><font face="Arial" size="2">&lt;botname&gt;
+      accompany &lt;othername&gt;</font></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="14"><font face="Arial" size="2">&lt;botname&gt;
+      accompany &lt;othername&gt; for xx &lt;time&gt;</font></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="14"><font face="Arial" size="2">&lt;botname&gt;
+      accompany &lt;othername&gt; forever</font></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="14"><font face="Arial" size="2">&lt;botname&gt;
+      cover &lt;othername&gt;</font></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="14"><font face="Arial" size="2">&lt;botname&gt;
+      cover &lt;othername&gt; for xx &lt;time&gt;</font></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="14"><font face="Arial" size="2">&lt;botname&gt;
+      cover &lt;othername&gt; forever</font></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="14"><font face="Arial" size="2">&lt;botname&gt;
+      go with &lt;othername&gt;</font></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="14"><font face="Arial" size="2">&lt;botname&gt;
+      go with &lt;othername&gt; for xx &lt;time&gt;</font></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="14"><font face="Arial" size="2">&lt;botname&gt;
+      go with &lt;othername&gt; forever</font></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="7"><font face="Arial" size="2">&lt;botname&gt;
+      go to &lt;loc/obj&gt;</font></td>
+    <td width="50%" align="center" height="14" rowspan="2"><font face="Arial" size="2">Bot
+      should go either go to the specified location or pick up the specified
+      object.</font></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="7"><font face="Arial" size="2">&lt;botname&gt;
+      get &lt;loc/obj&gt;</font></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="14"><font face="Arial" size="2">&lt;botname&gt;
+      patrol from &lt;loc/obj&gt; to &lt;loc/obj&gt;</font></td>
+    <td width="50%" align="center" height="56" rowspan="3"><font face="Arial" size="2">Bot
+      will run back and forth between specified locations and/or objects for the
+      specified time.</font></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="14"><font face="Arial" size="2">&lt;botname&gt;
+      patrol from &lt;loc/obj&gt; to &lt;loc/obj&gt; for xx &lt;time&gt;</font></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="14"><font face="Arial" size="2">&lt;botname&gt;
+      patrol from &lt;loc/obj&gt; to &lt;loc/obj&gt; forever</font></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="5"><font face="Arial" size="2">&lt;botname&gt;
+      camp near &lt;loc/obj&gt;</font></td>
+    <td width="50%" align="center" height="70" rowspan="3"><font face="Arial" size="2">Bot
+      will camp (and defend) near the specified location or object for specified
+      time.</font></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="19"><font face="Arial" size="2">&lt;botname&gt;
+      camp near &lt;loc/obj&gt; for xx &lt;time&gt;</font></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="19"><font face="Arial" size="2">&lt;botname&gt;
+      camp near &lt;loc/obj&gt; forever</font></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="19"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">&lt;botname&gt;
+      camp here</font></span></td>
+    <td width="50%" align="center" height="68" rowspan="3"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">The
+      bot will guard YOUR present location for a specified period of time.&nbsp;
+      Bots told to Camp will NOT move around to collect items close to their
+      targets.</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="19"><font face="Arial" size="2"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&lt;botname&gt;
+      camp here for xx </span>&lt;time&gt;</font></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="18"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">&lt;botname&gt;
+      camp here forever</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="8"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">&lt;botname&gt;
+      camp there</font></span></td>
+    <td width="50%" align="center" height="20"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">The
+      bot will guard its own location for a specified periond of time.&nbsp;
+      Bots told to Camp will NOT move around to collect items close to their
+      targets.</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="19"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">&lt;botname&gt;
+      camp &lt;loc/obj&gt;</font></span></td>
+    <td width="50%" align="center" height="265" rowspan="9"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">Bot
+      will camp at specified object or location for specified time. Bots told to
+      Camp will NOT move around to collect items close to their targets.</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="19"><font face="Arial" size="2"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&lt;botname&gt;
+      camp &lt;loc/obj&gt; for xx </span>&lt;time&gt;</font></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="19"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">&lt;botname&gt;
+      camp &lt;loc/obj&gt; forever</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="19"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">&lt;botname&gt;
+      defend &lt;loc/obj&gt;</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="19"><font face="Arial" size="2"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&lt;botname&gt;
+      defend &lt;loc/obj&gt; for </span>&lt;time&gt;</font></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="19"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">&lt;botname&gt;
+      defend &lt;loc/obj&gt; forever</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="19"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">&lt;botname&gt;
+      guard &lt;loc/obj&gt;</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="19"><font face="Arial" size="2"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&lt;botname&gt;
+      guard &lt;loc/obj&gt; for xx </span>&lt;time&gt;</font></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="19"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">&lt;botname&gt;
+      guard &lt;loc/obj&gt; forever</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="19"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">&lt;botname&gt;
+      help &lt;othername&gt;</font></span></td>
+    <td width="50%" align="center" height="58" rowspan="2"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">Bot
+      should find and assist other team member.</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="19"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">&lt;botname&gt;
+      meet &lt;othername&gt;</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="19"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">&lt;botname&gt;
+      lead the way (then give action – bot will wait for you to follow)</font></span></td>
+    <td width="50%" align="center" height="29"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">Bot
+      will go on ahead, then perform specified action.</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="19"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">&lt;botname&gt;
+      kill &lt;enemyname&gt;</font></span></td>
+    <td width="50%" align="center" height="58" rowspan="2"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">Bot
+      will hunt down and kill specified player.</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="19"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">&lt;botname&gt;
+      hunt down &lt;enemyname&gt;</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="19"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">&lt;botname&gt;
+      dismissed</font></span></td>
+    <td width="50%" align="center" height="87" rowspan="3"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">Bot
+      will stop performing the last task you commanded it to do and commence
+      roaming.</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="19"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">&lt;botname&gt;
+      dismiss</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="19"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">&lt;botname&gt;
+      stop action</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="19"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">I
+      quit being the leader</font></span></td>
+    <td width="50%" align="center" height="116" rowspan="4"><font face="Arial" size="2"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">Allows
+      a bot to become the team leader and give commands.</span></font></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="19"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">I
+      quit being team leader</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="19"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">I
+      stop being the leader</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" height="19"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">I
+      stop being team leader</font></span></td>
+  </tr>
+</table>
+<p class="MsoNormal" align="left"><font face="Arial" size="3"><b><u><span style="mso-bidi-font-size: 10.0pt">Squad
+Commands</span></u></b></font><u><span style="mso-bidi-font-size: 10.0pt"><font face="Arial" size="3"><b>:</b></font><font face="Arial" size="2"><br>
+</font></span></u><font face="Arial" size="2">The following commands allow you
+to group your team into sub-teams, or squads.<span style="mso-spacerun: yes">&nbsp;
+</span>Teams/squads are numbered using the greek alphabet (alpha, beta, gamma,
+delta, etc.)<span style="mso-spacerun: yes">&nbsp; </span>All the commands below
+say <b>alpha</b>.<span style="mso-spacerun: yes">&nbsp; </span>Don’t just use
+alpha.<span style="mso-spacerun: yes">&nbsp; </span>Stir it up a bit.<span style="mso-spacerun:
+yes">&nbsp; </span>Call them something else.</font></p>
+<span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">Notice
+that, once a team is named, you can simply type in the <b>&lt;squadname&gt;</b>
+(ex. alpha) and have the team execute ANY command that appears above.</font></span>
+<p><font face="Arial" size="2"><u><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">New
+variable</span></u><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">:</span></font></p>
+<ul>
+  <li>
+    <p style="margin-left:.25in;text-indent:-.25in;mso-list:l2 level1 lfo7;
+tab-stops:list .25in"><font face="Arial" size="2"><b>&lt;squadname&gt;</b> -
+    this refers to the name of the team you give it.<span style="mso-spacerun:
+yes">&nbsp; </span>It is normally a Greek alphabet name, but can be anything.</font></li>
+</ul>
+<p><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2"><span style="mso-spacerun: yes">&nbsp;Please
+Note:&nbsp; </span>In commands that have two botnames, don’t put the same
+botname in each.</font></span></p>
+<table border="1" width="100%">
+  <tr>
+    <td width="50%" align="center"><b><u><font face="Arial" size="3">Command</font></u></b></td>
+    <td width="50%" align="center"><b><u><font face="Arial" size="3">Expected
+      Action</font></u></b></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">who
+      is the leader</font></span></td>
+    <td width="50%" align="center" rowspan="2"><font face="Arial" size="2">Bot
+      will inform you who the leader is.</font></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">who
+      is team leader</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><font face="Arial" size="2">&lt;botname&gt;
+      and &lt;botname&gt; are in team&lt;squadname&gt;</font></td>
+    <td width="50%" align="center" rowspan="4"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">Assigns
+      named bots to specified squad.</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><font face="Arial" size="2">&lt;botname&gt;
+      and &lt;botname&gt; are in squad &lt;squadname&gt;</font></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><font face="Arial" size="2">&lt;botname&gt;,
+      &lt;botname&gt; are in team &lt;squadname&gt;</font></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><font face="Arial" size="2">&lt;botname&gt;,
+      &lt;botname&gt; are in squad &lt;squadname&gt;</font></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><font face="Arial" size="2">&lt;botname&gt;
+      and &lt;botname&gt; join team &lt;squadname&gt;</font></td>
+    <td width="50%" align="center" rowspan="4"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">Bots
+      named will join specified squad.</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><font face="Arial" size="2">&lt;botname&gt;
+      and &lt;botname&gt; join squad &lt;squadname&gt;</font></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">&lt;botname&gt;,
+      &lt;botname&gt; join team &lt;squadname&gt;</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">&lt;botname&gt;,
+      &lt;botname&gt; join squad &lt;squadname&gt;</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">&lt;botname&gt;
+      and &lt;botname&gt; create team &lt;squadname&gt;</font></span></td>
+    <td width="50%" align="center" rowspan="4"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">Bots
+      named will create specified squad.</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">&lt;botname&gt;
+      and &lt;botname&gt; create squad &lt;squadname&gt;</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">&lt;botname&gt;,
+      &lt;botname&gt; create team &lt;squadname&gt;</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">&lt;botname&gt;,
+      &lt;botname&gt; create squad &lt;squadname&gt;</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">&lt;botname&gt;
+      join team &lt;squadname&gt;</font></span></td>
+    <td width="50%" align="center" rowspan="2"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">Bot
+      will join specified squad.</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">&lt;botname&gt;
+      join squad &lt;squadname&gt;</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">&lt;botname&gt;
+      which team are you on</font></span></td>
+    <td width="50%" align="center" rowspan="6"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">Bot
+      named will tell you what team or squad they are part of.</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">&lt;botname&gt;
+      what squad are you in</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">&lt;botname&gt;
+      what is your team</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">&lt;botname&gt;
+      what is your squad</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">&lt;botname&gt;
+      are you on a team</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">&lt;botname&gt;
+      are you in a squad</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">&lt;botname&gt;
+      leave your team</font></span></td>
+    <td width="50%" align="center" rowspan="2"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">Bot
+      will leave specified squad.</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">&lt;botname&gt;
+      leave your squad</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">&lt;botname&gt;
+      ungroup</font></span></td>
+    <td width="50%" align="center"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">Bot
+      will break off from squad and go on its own.</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">&lt;squadname&gt;
+      ungroup</font></span></td>
+    <td width="50%" align="center"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">Every
+      bot in the specified squad will break off and go on its own.</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">everyone
+      ungroup</font></span></td>
+    <td width="50%" align="center"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">Every
+      bot in every squad will break off and go on its own.</font></span></td>
+  </tr>
+</table>
+<p><u><b><font face="Arial" size="3"><span style="mso-bidi-font-size: 10.0pt">CTF
+Commands:</span></font></b></u></p>
+<p><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">All
+the above commands work in a CTF game.<span style="mso-spacerun: yes">&nbsp; </span>The
+commands below refer only to CTF and won’t work in Team Deathmatch for the
+obvious reason that they relate specifically to the FLAG.</font></span></p>
+<p class="MsoNormal"><font face="Arial" size="2"><u>New variable</u>:<b><o:p>
+ </o:p>
+</b></font></p>
+<ul>
+  <li><font face="Arial" size="2"><b><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&lt;enemy&gt;
+    </span></b><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">-<span style="mso-spacerun: yes">&nbsp;
+    </span>refers to whatever color the enemy flag is.<span style="mso-spacerun: yes">&nbsp;
+    </span>If the bot is red, put <b>blue</b> or <b>enemy</b>.<span style="mso-spacerun: yes">&nbsp;
+    </span>If the bot is blue…you get the idea.</span></font></li>
+</ul>
+<table border="1" width="100%">
+  <tr>
+    <td width="50%" align="center"><b><u><font face="Arial" size="3">Command</font></u></b></td>
+    <td width="50%" align="center"><b><u><font face="Arial" size="3">Expected
+      Action</font></u></b></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><font face="Arial" size="2">&lt;botname&gt;
+      get &lt;enemy&gt; flag</font></td>
+    <td width="50%" rowspan="4" align="center"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">Bot
+      will go out and get the flag.<span style="mso-spacerun: yes">&nbsp; </span>It
+      will also bring it back.</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">&lt;botname&gt;
+      capture the &lt;enemy&gt; flag</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">&lt;botname&gt;
+      get &lt;enemy&gt; flag</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">&lt;botname&gt;
+      capture &lt;enemy&gt; flag</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">&lt;botname&gt;
+      defend the base</font></span></td>
+    <td width="50%" align="center" rowspan="3"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">Bot
+      should defend the base (friendly flag).</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">&lt;botname&gt;
+      guard the base</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">&lt;botname&gt;
+      camp the base</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><font face="Arial" size="2"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">w</span></font><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">hat
+      is my command</font></span></td>
+    <td width="50%" align="center" rowspan="4"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">These
+      commands are for when a BOT is team leader.<span style="mso-spacerun: yes">&nbsp;
+      </span>You need not address the bot by its name.</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><font face="Arial" size="2"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">w</span></font><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">hat
+      should I do</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><font face="Arial" size="2"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">w</span></font><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">hat
+      am I supposed to do</font></span></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><font face="Arial" size="2"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">w</span></font><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">hat
+      is my job</font></span></td>
+  </tr>
+</table>
+
+</body>
+
+</html>
